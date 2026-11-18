@@ -1727,7 +1727,7 @@ addEventListener('hashchange',route);route();
 </script>
 <script>
 (function(){
-  var INLINE=false;
+  var INLINE=/(^|\.)(github\.io|clubsan\.fr)$/.test(location.hostname);
   function poster(b){if(b.dataset.p)return;b.dataset.p=1;var i=new Image();i.alt='';i.onerror=function(){i.remove()};i.src='https://i.ytimg.com/vi/'+b.dataset.yt+'/hqdefault.jpg';b.insertBefore(i,b.firstChild)}
   function scan(){document.querySelectorAll('.vid[data-yt]').forEach(poster)}
   document.addEventListener('click',function(e){
@@ -1770,7 +1770,7 @@ function on(){var y=scrollY;h.classList.toggle('stuck',y>30);
  if(y<=30)h.classList.remove('hide');last=y}
 h.addEventListener('animationend',function(){h.classList.remove('bounce')});
 addEventListener('scroll',on,{passive:true});on()})()</script>
-<script>document.addEventListener('DOMContentLoaded',function(){var cn=document.getElementById('cn');if(!cn)return;var INLINE=false,id='',tm,last=null;
+<script>document.addEventListener('DOMContentLoaded',function(){var cn=document.getElementById('cn');if(!cn)return;var INLINE=/(^|\.)(github\.io|clubsan\.fr)$/.test(location.hostname),id='',tm,last=null;
 var st=document.getElementById('cnst'),im=document.getElementById('cni');
 function show(){cn.classList.add('show');clearTimeout(tm);tm=setTimeout(function(){cn.classList.remove('show')},2200)}
 function openC(b){last=document.activeElement;id=b.getAttribute('data-cinema');var tt=b.getAttribute('data-title');document.getElementById('cnt').textContent=tt||'L’Assemblée de Molière · Épisode 1';document.getElementById('cnb').textContent=tt?'16:9':'Épisode 1 · 16:9';im.style.display='';im.onerror=function(){im.style.display='none'};im.src='https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg';cn.classList.add('on');cn.setAttribute('aria-hidden','false');document.getElementById('cng').focus()}
